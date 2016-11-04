@@ -9,55 +9,130 @@
     <sprites name="battle_field">
       <sprites name="robopia">
         <sprites name="character">
-          <sprite>sprites\spr_battle_field_robopia_character_1</sprite>
+          <sprite>sprites\spr_robopia_character_1</sprite>
+          <sprite>sprites\spr_robopia_character_2</sprite>
+          <sprite>sprites\spr_robopia_character_3</sprite>
+          <sprite>sprites\spr_robopia_character_4</sprite>
+          <sprite>sprites\spr_robopia_character_5</sprite>
+        </sprites>
+        <sprites name="tower">
+          <sprite>sprites\spr_robopia_main_tower</sprite>
+          <sprite>sprites\spr_robopia_sub_tower</sprite>
         </sprites>
       </sprites>
-      <sprites name="interface"/>
+      <sprites name="humania">
+        <sprites name="chracter">
+          <sprite>sprites\spr_humania_character_1</sprite>
+          <sprite>sprites\spr_humania_character_2</sprite>
+          <sprite>sprites\spr_humania_character_3</sprite>
+          <sprite>sprites\spr_humania_character_4</sprite>
+          <sprite>sprites\spr_humania_character_5</sprite>
+        </sprites>
+        <sprites name="tower">
+          <sprite>sprites\spr_humania_main_tower</sprite>
+          <sprite>sprites\spr_humania_sub_tower</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="bg">
+        <sprite>sprites\spr_cloud</sprite>
+        <sprite>sprites\spr_moon</sprite>
+        <sprite>sprites\spr_sun</sprite>
+      </sprites>
+      <sprites name="btn">
+        <sprites name="robopia">
+          <sprite>sprites\spr_robopia_card_1</sprite>
+          <sprite>sprites\spr_robopia_card_2</sprite>
+          <sprite>sprites\spr_robopia_card_3</sprite>
+          <sprite>sprites\spr_robopia_card_4</sprite>
+        </sprites>
+        <sprites name="humania">
+          <sprite>sprites\spr_humania_card_1</sprite>
+          <sprite>sprites\spr_humania_card_2</sprite>
+          <sprite>sprites\spr_humania_card_3</sprite>
+          <sprite>sprites\spr_humania_card_4</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="text">
+        <sprite>sprites\spr_timer</sprite>
+        <sprite>sprites\spr_text_1</sprite>
+        <sprite>sprites\spr_text_2</sprite>
+        <sprite>sprites\spr_text_3</sprite>
+        <sprite>sprites\spr_text_4</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\background4</background>
-    <backgrounds name="bg">
-      <backgrounds name="battle_field">
-        <background>background\bg_battle_field</background>
+    <backgrounds name="battle_field">
+      <backgrounds name="tile">
+        <background>background\t_battle_field_sand</background>
+        <background>background\t_battle_field_mountain_1</background>
+        <background>background\t_battle_field_mountain_2</background>
+        <background>background\t_battle_field_mountain_3</background>
+        <background>background\t_battle_field_pyramid</background>
+        <background>background\t_battle_field_catus_1</background>
+        <background>background\t_battle_field_catus_2</background>
+        <background>background\t_battle_field_catus_3</background>
+        <background>background\t_battle_field_catus_4</background>
       </backgrounds>
-    </backgrounds>
-    <backgrounds name="tile">
-      <backgrounds name="battle_field">
-        <backgrounds name="sand">
-          <background>background\t_battle_field_left_sand</background>
-          <background>background\t_battle_field_mid_sand</background>
-          <background>background\t_battle_field_right_sand</background>
-          <background>background\t_battle_field_bottom_mid_sand</background>
-          <background>background\t_battle_field_bottom_left_sand</background>
-          <background>background\t_battle_field_bottom_right_sand</background>
-        </backgrounds>
-        <backgrounds name="tree">
-          <background>background\t_battle_field_tree</background>
-        </backgrounds>
-        <backgrounds name="bush">
-          <background>background\t_battle_field_bush_1</background>
-          <background>background\t_battle_field_bush_2</background>
-        </backgrounds>
-        <backgrounds name="catus">
-          <background>background\t_battle_field_catus_1</background>
-          <background>background\t_battle_field_catus_2</background>
-          <background>background\t_battle_field_catus_3</background>
-        </backgrounds>
-        <backgrounds name="etc">
-          <background>background\t_battle_field_skeleton</background>
-          <background>background\t_battle_field_stone</background>
-        </backgrounds>
-        <backgrounds name="grass">
-          <background>background\t_battle_field_grass_1</background>
-          <background>background\t_battle_field_grass_2</background>
-        </backgrounds>
+      <backgrounds name="bg">
+        <background>background\bg_battle_field_morning</background>
+        <background>background\bg_battle_field_night</background>
+        <background>background\bg_battle_field_afternoon</background>
+      </backgrounds>
+      <backgrounds name="mark">
+        <background>background\robopia_mark</background>
+        <background>background\humania_mark</background>
       </backgrounds>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\f_timer</font>
+  </fonts>
   <objects name="objects">
-    <objects name="interface"/>
+    <objects name="battle_field">
+      <objects name="robopia">
+        <objects name="character">
+          <object>objects\obj_robopia_character_1</object>
+        </objects>
+        <objects name="tower">
+          <object>objects\obj_robopia_main_tower</object>
+          <object>objects\obj_robopia_sub_tower</object>
+        </objects>
+      </objects>
+      <objects name="bg">
+        <object>objects\obj_cloud</object>
+        <object>objects\obj_moon</object>
+        <object>objects\obj_sun</object>
+      </objects>
+      <objects name="humania">
+        <objects name="tower">
+          <object>objects\obj_humania_sub_tower</object>
+          <object>objects\obj_humania_main_tower</object>
+        </objects>
+      </objects>
+      <objects name="btn">
+        <objects name="robopia">
+          <object>objects\obj_robopia_card_1</object>
+          <object>objects\obj_robopia_card_2</object>
+          <object>objects\obj_robopia_card_3</object>
+          <object>objects\obj_robopia_card_4</object>
+        </objects>
+        <objects name="humania">
+          <object>objects\obj_humania_card_1</object>
+          <object>objects\obj_humania_card_2</object>
+          <object>objects\obj_humania_card_3</object>
+          <object>objects\obj_humania_card_4</object>
+        </objects>
+      </objects>
+      <objects name="text">
+        <object>objects\obj_timer</object>
+        <object>objects\obj_text_1</object>
+        <object>objects\obj_text_2</object>
+        <object>objects\obj_text_3</object>
+        <object>objects\obj_text_4</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_battle_field</room>
