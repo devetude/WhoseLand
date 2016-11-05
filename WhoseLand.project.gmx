@@ -19,6 +19,10 @@
           <sprite>sprites\spr_robopia_main_tower</sprite>
           <sprite>sprites\spr_robopia_sub_tower</sprite>
         </sprites>
+        <sprites name="bar">
+          <sprite>sprites\spr_robopia_resource_bar</sprite>
+          <sprite>sprites\spr_robopia_resource_full_bar</sprite>
+        </sprites>
       </sprites>
       <sprites name="humania">
         <sprites name="chracter">
@@ -31,6 +35,10 @@
         <sprites name="tower">
           <sprite>sprites\spr_humania_main_tower</sprite>
           <sprite>sprites\spr_humania_sub_tower</sprite>
+        </sprites>
+        <sprites name="bar">
+          <sprite>sprites\spr_humania_resource_bar</sprite>
+          <sprite>sprites\spr_humania_resource_full_bar</sprite>
         </sprites>
       </sprites>
       <sprites name="bg">
@@ -92,10 +100,14 @@
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\f_timer</font>
+    <font>fonts\f_resource</font>
   </fonts>
   <objects name="objects">
     <objects name="battle_field">
       <objects name="robopia">
+        <objects name="bar">
+          <object>objects\obj_robopia_resource_bar</object>
+        </objects>
         <objects name="character">
           <object>objects\obj_robopia_character_1</object>
         </objects>
@@ -113,6 +125,9 @@
         <objects name="tower">
           <object>objects\obj_humania_sub_tower</object>
           <object>objects\obj_humania_main_tower</object>
+        </objects>
+        <objects name="bar">
+          <object>objects\obj_humania_resource_bar</object>
         </objects>
       </objects>
       <objects name="btn">

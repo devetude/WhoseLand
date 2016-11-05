@@ -74,6 +74,8 @@
     <instance objName="obj_text_8" x="400" y="80" name="inst_F38DEA26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text_9" x="448" y="80" name="inst_6E114847" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text_0" x="496" y="80" name="inst_F5FAA156" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_robopia_resource_bar" x="48" y="0" name="inst_7D9AD439" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_humania_resource_bar" x="320" y="0" name="inst_45DCDA64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="t_battle_field_mountain_3" x="0" y="80" w="512" h="112" xo="0" yo="0" id="10000123" name="inst_80A60172" depth="1000005" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
