@@ -53,14 +53,14 @@ alarm[0] = 30;
           <argument>
             <kind>1</kind>
             <string>// 배경 변경을 위한 시간을 1 감소 시킴
-global.background_convert_time -= 1;
+background_convert_time -= 1;
 
 // 배경 1번(해질녘), 2번(저녁)의 알파 값을 조정
-background_alpha[1] = global.background_convert_time / 30;
-background_alpha[2] = 1 - global.background_convert_time / 30;
+background_alpha[1] = background_convert_time / 30;
+background_alpha[2] = 1 - background_convert_time / 30;
 
 // 배경 변경을 위한 시간이 아직 남아있다면 반복
-if(global.background_convert_time != 0) {
+if(background_convert_time != 0) {
     alarm[2] = 1;
 }
 
@@ -91,14 +91,14 @@ else {
           <argument>
             <kind>1</kind>
             <string>// 배경 변경을 위한 시간을 1 감소 시킴
-global.background_convert_time -= 1;
+background_convert_time -= 1;
 
 // 배경 0번(아침), 1번(해질녘)의 알파 값을 조정
-background_alpha[0] = global.background_convert_time / 30;
-background_alpha[1] = 1 - global.background_convert_time / 30;
+background_alpha[0] = background_convert_time / 30;
+background_alpha[1] = 1 - background_convert_time / 30;
 
 // 배경 변경을 위한 시간이 아직 남아있다면 반복
-if(global.background_convert_time != 0) {
+if(background_convert_time != 0) {
     alarm[1] = 1;
 }
 
@@ -138,7 +138,7 @@ if(global.remain_time == 200) {
     background_visible[1] = true;
     
     // 배경 변경을 위한 시간을 30으로 설정 (30프레임)
-    global.background_convert_time = 30;
+    background_convert_time = 30;
     
     // 알람 1번에 등록 (1/30초 마다 호출)
     alarm[1] = 1;
@@ -150,8 +150,11 @@ else if(global.remain_time == 100) {
     background_alpha[2] = 0;
     background_visible[2] = true;
     
+    // 달 오브젝트를 생성
+    instance_create(192, -64, obj_moon);
+    
     // 배경 변경을 위한 시간을 30으로 설정 (30프레임)
-    global.background_convert_time = 30;
+    background_convert_time = 30;
     
     // 알람 2번에 등록 (1/30초 마다 호출)
     alarm[2] = 1;

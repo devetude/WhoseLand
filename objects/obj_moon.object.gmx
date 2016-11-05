@@ -7,7 +7,74 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 스프라이트 애니메이션 속도 조정
+image_speed = 0.2333;
+
+// 초기 알파 값을 0.0으로 설정
+image_alpha = 0.0;
+
+// 달 애니메이션을 위한 변수 (30프레임)
+obj_change_time = 30;
+
+// 달 애니메이션을 위한 알람 등록 (1/30초)
+alarm[0] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 오브젝트 변경을 위한 변수 1 감소
+obj_change_time -= 1;
+
+// y 위치와 알파 값을 변경
+y += 64 / 30;
+image_alpha += 1 / 30;
+
+// 아직 오브젝트 변경 시간이 남아있는 경우 알람 재등록
+if(obj_change_time &gt; 0) {
+    alarm[0] = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

@@ -26,7 +26,87 @@
           <argument>
             <kind>1</kind>
             <string>// 스프라이트 애니메이션 속도 조정
-image_speed = 0.2;
+image_speed = 0.2333;
+
+// 1초 마다 알람 실행
+alarm[0] = 30;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 오브젝트 변경을 위한 변수 값을 1 감소
+obj_change_time -= 1;
+
+// y 위치와 알파 값을 변경
+y -= 64 / 30;
+image_alpha -= 1 / 30;
+
+// 오브젝트 변경을 위한 변수 값이 0보다 클 경우 알람 재등록
+if(obj_change_time &gt; 0) {
+    alarm[1] = 1;
+}
+
+else {
+    // 인스턴스 삭제
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 남은 시간이 201초 보다 많은 경우 알람을 재등록
+if(201 &lt; global.remain_time) {
+    alarm[0] = 30;
+}
+
+else if(global.remain_time == 201) {
+    // 오브젝트를 이동시키기 위한 변수 값 설정 (30프레임)
+    obj_change_time = 30;
+    
+    // 오브젝트를 이동시키 위한 알람 등록 (1/30초)
+    alarm[1] = 1;
+}
+
+else {
+    // 인스턴스 제거
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
