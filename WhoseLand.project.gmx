@@ -53,11 +53,15 @@
         </sprites>
       </sprites>
       <sprites name="text">
-        <sprite>sprites\spr_timer</sprite>
+        <sprite>sprites\spr_text_0</sprite>
         <sprite>sprites\spr_text_1</sprite>
         <sprite>sprites\spr_text_2</sprite>
         <sprite>sprites\spr_text_3</sprite>
         <sprite>sprites\spr_text_4</sprite>
+        <sprite>sprites\spr_text_7</sprite>
+        <sprite>sprites\spr_text_8</sprite>
+        <sprite>sprites\spr_text_9</sprite>
+        <sprite>sprites\spr_timer</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -126,11 +130,15 @@
         </objects>
       </objects>
       <objects name="text">
-        <object>objects\obj_timer</object>
+        <object>objects\obj_text_0</object>
         <object>objects\obj_text_1</object>
         <object>objects\obj_text_2</object>
         <object>objects\obj_text_3</object>
         <object>objects\obj_text_4</object>
+        <object>objects\obj_text_7</object>
+        <object>objects\obj_text_8</object>
+        <object>objects\obj_text_9</object>
+        <object>objects\obj_timer</object>
       </objects>
     </objects>
   </objects>

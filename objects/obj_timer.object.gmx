@@ -8,90 +8,244 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 전역 변수로 남은 시간을 300초로 설정
+global.remain_time = 300;
+
+// 1초 마다 1번씩 타이머가 작동하도록 알람 등록
+alarm[0] = 30;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 배경 변경을 위한 시간을 1 감소 시킴
+global.background_convert_time -= 1;
+
+// 배경 1번(해질녘), 2번(저녁)의 알파 값을 조정
+background_alpha[1] = global.background_convert_time / 30;
+background_alpha[2] = 1 - global.background_convert_time / 30;
+
+// 배경 변경을 위한 시간이 아직 남아있다면 반복
+if(global.background_convert_time != 0) {
+    alarm[2] = 1;
+}
+
+// 시간이 모두 소진되었다면 배경 1번을 숨김
+else {
+    background_visible[1] = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 배경 변경을 위한 시간을 1 감소 시킴
+global.background_convert_time -= 1;
+
+// 배경 0번(아침), 1번(해질녘)의 알파 값을 조정
+background_alpha[0] = global.background_convert_time / 30;
+background_alpha[1] = 1 - global.background_convert_time / 30;
+
+// 배경 변경을 위한 시간이 아직 남아있다면 반복
+if(global.background_convert_time != 0) {
+    alarm[1] = 1;
+}
+
+// 시간이 모두 소진되었다면 배경 0번을 숨김
+else {
+    background_visible[0] = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 남은 시간을 1초 감소
+global.remain_time -= 1;
+
+// 남은 시간이 200초가 되면 배경을 해질녘으로 변경
+if(global.remain_time == 200) {
+    // 초기에 배경 1번(해질녘)의 알파 값을 0으로 설정하고 보이도록 함
+    background_alpha[1] = 0;
+    background_visible[1] = true;
+    
+    // 배경 변경을 위한 시간을 30으로 설정 (30프레임)
+    global.background_convert_time = 30;
+    
+    // 알람 1번에 등록 (1/30초 마다 호출)
+    alarm[1] = 1;
+}
+
+// 남은 시간이 100초가 되면 배경을 저녁으로 변경
+else if(global.remain_time == 100) {
+    // 초기에 배경 2번(저녁)의 알파 값을 0으로 설정하고 보이도록 함
+    background_alpha[2] = 0;
+    background_visible[2] = true;
+    
+    // 배경 변경을 위한 시간을 30으로 설정 (30프레임)
+    global.background_convert_time = 30;
+    
+    // 알람 2번에 등록 (1/30초 마다 호출)
+    alarm[2] = 1;
+}
+
+// 알람 이벤트가 발생했을 경우 다시 1초 후에 발생하도록 알람 설정
+alarm[0] = 30;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 남은 시간이 0이 아닐 경우
+if(global.remain_time != -1) {
+    exit;
+}
+
+// 남은 시간이 0일 경우
+else {
+    // 게임 종료를 알리고 게임 종료
+    show_message("게임 종료!");
+    game_end();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring>draw_self();</codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>524</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_color</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>13</kind>
-            <string>16777215</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>526</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_font</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>12</kind>
-            <font>f_timer</font>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>514</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_text</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>-1</relative>
+        <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>2</kind>
-            <string>05:00</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>20</string>
+            <kind>1</kind>
+            <string>// 자기 자신을 그림
+draw_self();
+
+// 남은 시간을 분과 초로 분리
+var minutes = global.remain_time div 60;
+var seconds = global.remain_time mod 60;
+var minutes_str = "";
+var seconds_str = "";
+
+// 분이 10보다 작을 경우 앞에 0을 붙임
+if(minutes &lt; 10) {
+    minutes_str = "0" + string(minutes);
+}
+
+else {
+    minutes_str = string(minutes);
+}
+
+// 초가 10보다 작을 경우 앞에 0을 붙임
+if(seconds &lt; 10) {
+    seconds_str = "0" + string(seconds);
+}
+
+else {
+    seconds_str = string(seconds);
+}
+
+// 폰트, 색깔, 위치, 텍스트 설정 후 그림
+draw_set_color(c_white);
+draw_set_font(f_timer);
+draw_text(x - 14, y + 20, minutes_str + ":" + seconds_str);
+</string>
           </argument>
         </arguments>
       </action>
