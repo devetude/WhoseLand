@@ -25,10 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.robopia_resource = 5;
+            <string>// 초기 자원을 5로 설정
+global.robopia_resource = 5;
 
+// 애니메이션 재생 속도 설정
 image_speed = 0.2333;
 
+// 3초마다 알람이 호출되도록 등록
 alarm[0] = 90;
 </string>
           </argument>
@@ -52,21 +55,22 @@ alarm[0] = 90;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.robopia_resource &lt; 10) {
+            <string>// 자원이 10보다 작을 경우 1 증가
+if(global.robopia_resource &lt; 10) {
     global.robopia_resource++;
 }
 
-else {
-}
-
+// 남은 시간이 200초 보다 클 경우 3초에 한번씩 자원 증가
 if(200 &lt; global.remain_time) {
     alarm[0] = 90;
 }
 
+// 남은 시간이 100초 보다 크고 200초 보다 작은 경우 2초에 한번씩 자원 증가
 else if(100 &lt; global.remain_time &amp;&amp; global.remain_time &lt;= 200) {
     alarm[0] = 60;
 }
 
+// 남은 시간이 100초 보다 작은 경우 1초에 한번씩 자원 증가
 else {
     alarm[0] = 30;
 }
@@ -96,6 +100,7 @@ else {
 draw_set_color(c_white);
 draw_set_font(f_resource);
 
+// 자원이 10인 경우 애니메이션 표시
 if(global.robopia_resource == 10) {
     draw_sprite(spr_robopia_resource_full_bar, image_index, x, y);
     draw_text(x + 12, y + 19, global.robopia_resource);

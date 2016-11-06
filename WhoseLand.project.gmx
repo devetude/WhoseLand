@@ -23,6 +23,12 @@
           <sprite>sprites\spr_robopia_resource_bar</sprite>
           <sprite>sprites\spr_robopia_resource_full_bar</sprite>
         </sprites>
+        <sprites name="card">
+          <sprite>sprites\spr_robopia_character_card</sprite>
+        </sprites>
+        <sprites name="cost">
+          <sprite>sprites\spr_robopia_cost</sprite>
+        </sprites>
       </sprites>
       <sprites name="humania">
         <sprites name="chracter">
@@ -40,6 +46,12 @@
           <sprite>sprites\spr_humania_resource_bar</sprite>
           <sprite>sprites\spr_humania_resource_full_bar</sprite>
         </sprites>
+        <sprites name="card">
+          <sprite>sprites\spr_humania_character_card</sprite>
+        </sprites>
+        <sprites name="cost">
+          <sprite>sprites\spr_humania_cost</sprite>
+        </sprites>
       </sprites>
       <sprites name="bg">
         <sprite>sprites\spr_cloud</sprite>
@@ -48,16 +60,10 @@
       </sprites>
       <sprites name="btn">
         <sprites name="robopia">
-          <sprite>sprites\spr_robopia_card_1</sprite>
-          <sprite>sprites\spr_robopia_card_2</sprite>
-          <sprite>sprites\spr_robopia_card_3</sprite>
-          <sprite>sprites\spr_robopia_card_4</sprite>
+          <sprite>sprites\spr_robopia_card</sprite>
         </sprites>
         <sprites name="humania">
-          <sprite>sprites\spr_humania_card_1</sprite>
-          <sprite>sprites\spr_humania_card_2</sprite>
-          <sprite>sprites\spr_humania_card_3</sprite>
-          <sprite>sprites\spr_humania_card_4</sprite>
+          <sprite>sprites\spr_humania_card</sprite>
         </sprites>
       </sprites>
       <sprites name="text">
@@ -65,8 +71,6 @@
         <sprite>sprites\spr_text_1</sprite>
         <sprite>sprites\spr_text_2</sprite>
         <sprite>sprites\spr_text_3</sprite>
-        <sprite>sprites\spr_text_4</sprite>
-        <sprite>sprites\spr_text_7</sprite>
         <sprite>sprites\spr_text_8</sprite>
         <sprite>sprites\spr_text_9</sprite>
         <sprite>sprites\spr_timer</sprite>
@@ -98,9 +102,13 @@
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\draw_text_outlined.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\f_timer</font>
     <font>fonts\f_resource</font>
+    <font>fonts\f_message</font>
   </fonts>
   <objects name="objects">
     <objects name="battle_field">
@@ -135,13 +143,11 @@
           <object>objects\obj_robopia_card_1</object>
           <object>objects\obj_robopia_card_2</object>
           <object>objects\obj_robopia_card_3</object>
-          <object>objects\obj_robopia_card_4</object>
         </objects>
         <objects name="humania">
           <object>objects\obj_humania_card_1</object>
           <object>objects\obj_humania_card_2</object>
           <object>objects\obj_humania_card_3</object>
-          <object>objects\obj_humania_card_4</object>
         </objects>
       </objects>
       <objects name="text">
@@ -149,8 +155,6 @@
         <object>objects\obj_text_1</object>
         <object>objects\obj_text_2</object>
         <object>objects\obj_text_3</object>
-        <object>objects\obj_text_4</object>
-        <object>objects\obj_text_7</object>
         <object>objects\obj_text_8</object>
         <object>objects\obj_text_9</object>
         <object>objects\obj_timer</object>
