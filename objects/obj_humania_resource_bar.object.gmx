@@ -31,8 +31,8 @@ global.humania_resource = 5;
 // 애니메이션 재생 속도 설정
 image_speed = 0.2333;
 
-// 3초마다 알람이 호출되도록 등록
-alarm[0] = 90;
+// 2초마다 알람이 호출되도록 등록
+alarm[0] = 60;
 </string>
           </argument>
         </arguments>
@@ -60,19 +60,19 @@ if(global.humania_resource &lt; 10) {
     global.humania_resource++;
 }
 
-// 남은 시간이 200초 보다 클 경우 3초에 한번씩 자원 증가
+// 남은 시간이 200초 보다 클 경우 2초에 한번씩 자원 증가
 if(200 &lt; global.remain_time) {
-    alarm[0] = 90;
-}
-
-// 남은 시간이 100초 보다 크고 200초 보다 작은 경우 2초에 한번씩 자원 증가
-else if(100 &lt; global.remain_time &amp;&amp; global.remain_time &lt;= 200) {
     alarm[0] = 60;
 }
 
-// 남은 시간이 100초 보다 작은 경우 1초에 한번씩 자원 증가
-else {
+// 남은 시간이 100초 보다 크고 200초 보다 작은 경우 1초에 한번씩 자원 증가
+else if(100 &lt; global.remain_time &amp;&amp; global.remain_time &lt;= 200) {
     alarm[0] = 30;
+}
+
+// 남은 시간이 100초 보다 작은 경우 0.5초에 한번씩 자원 증가
+else {
+    alarm[0] = 15;
 }
 </string>
           </argument>

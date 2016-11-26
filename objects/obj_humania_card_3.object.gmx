@@ -35,27 +35,27 @@ is_delayed_now = false;
 // 캐릭터의 인덱스에 맞는 설정 값들을 설정
 switch(character_index) {
     case 0:
-    character_spr = spr_humania_character_1;
+    character_obj = obj_humania_character_1;
     character_cost = 5;
     break;
     
     case 1:
-    character_spr = spr_humania_character_2;
+    character_obj = obj_humania_character_2;
     character_cost = 9;
     break;
     
     case 2:
-    character_spr = spr_humania_character_3;
+    character_obj = obj_humania_character_3;
     character_cost = 1;
     break;
     
     case 3:
-    character_spr = spr_humania_character_4;
+    character_obj = obj_humania_character_4;
     character_cost = 7;
     break;
     
     case 4:
-    character_spr = spr_humania_character_5;
+    character_obj = obj_humania_character_5;
     character_cost = 3;
     break;
 }
@@ -112,87 +112,6 @@ global.humania_message = "";
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="81">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// 딜레이가 걸려있는 경우가 아닌 경우에만
-if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 2) {
-    // 딜레이 설정
-    is_delayed_now = true;
-    
-    // 자원이 코스트 보다 많을 경우에만
-    if(global.humania_resource &gt;= global.selected_humania_character_cost) {
-        // 메세지를 담는 변수
-        global.humania_message = "";
-        
-        // 자원을 사용한 코스트 만큼 감소시킴
-        global.humania_resource -= global.selected_humania_character_cost;
-        
-        // 랜덤 값으로 캐릭터 인덱스 설정
-        randomize();
-        character_index = round(irandom_range(0, 4));
-        
-        // 선택된 캐릭터 인덱스 설정 변수
-        global.selected_humania_character_index = character_index;
-        
-        // 캐릭터의 인덱스에 맞는 설정 값들을 설정
-        switch(character_index) {
-            case 0:
-            character_spr = spr_humania_character_1;
-            character_cost = 5;
-            break;
-            
-            case 1:
-            character_spr = spr_humania_character_2;
-            character_cost = 9;
-            break;
-            
-            case 2:
-            character_spr = spr_humania_character_3;
-            character_cost = 1;
-            break;
-            
-            case 3:
-            character_spr = spr_humania_character_4;
-            character_cost = 7;
-            break;
-            
-            case 4:
-            character_spr = spr_humania_character_5;
-            character_cost = 3;
-            break;
-        }
-        
-        // 선택된 캐릭터 코스트 설정 변수 
-        global.selected_humania_character_cost = character_cost;
-    }
-    
-    else {
-        global.humania_message = "대장, 유닛 배치를 위한 " + string(global.selected_humania_character_cost - global.humania_resource) + "만큼의 자원이 부족합니다!";
-        alarm[0] = 30;
-    }
-    
-    alarm[1] = 15;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="5" enumb="80">
       <action>
         <libid>1</libid>
@@ -223,6 +142,9 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 2) {
         // 자원을 사용한 코스트 만큼 감소시킴
         global.humania_resource -= global.selected_humania_character_cost;
         
+        // 캐릭터 객체 생성
+        instance_create(448, 184, character_obj);
+        
         // 랜덤 값으로 캐릭터 인덱스 설정
         randomize();
         character_index = round(irandom_range(0, 4));
@@ -233,27 +155,111 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 2) {
         // 캐릭터의 인덱스에 맞는 설정 값들을 설정
         switch(character_index) {
             case 0:
-            character_spr = spr_humania_character_1;
+            character_obj = obj_humania_character_1;
             character_cost = 5;
             break;
             
             case 1:
-            character_spr = spr_humania_character_2;
+            character_obj = obj_humania_character_2;
             character_cost = 9;
             break;
             
             case 2:
-            character_spr = spr_humania_character_3;
+            character_obj = obj_humania_character_3;
             character_cost = 1;
             break;
             
             case 3:
-            character_spr = spr_humania_character_4;
+            character_obj = obj_humania_character_4;
             character_cost = 7;
             break;
             
             case 4:
-            character_spr = spr_humania_character_5;
+            character_obj = obj_humania_character_5;
+            character_cost = 3;
+            break;
+        }
+        
+        // 선택된 캐릭터 코스트 설정 변수 
+        global.selected_humania_character_cost = character_cost;
+    }
+    
+    else {
+        global.humania_message = "대장, 유닛 배치를 위한 " + string(global.selected_humania_character_cost - global.humania_resource) + "만큼의 자원이 부족합니다!";
+        alarm[0] = 30;
+    }
+    
+    alarm[1] = 15;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="79">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// 딜레이가 걸려있는 경우가 아닌 경우에만
+if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 2) {
+    // 딜레이 설정
+    is_delayed_now = true;
+    
+    // 자원이 코스트 보다 많을 경우에만
+    if(global.humania_resource &gt;= global.selected_humania_character_cost) {
+        // 메세지를 담는 변수
+        global.humania_message = "";
+        
+        // 자원을 사용한 코스트 만큼 감소시킴
+        global.humania_resource -= global.selected_humania_character_cost;
+        
+        // 캐릭터 객체 생성
+        instance_create(384, 184, character_obj);
+        
+        // 랜덤 값으로 캐릭터 인덱스 설정
+        randomize();
+        character_index = round(irandom_range(0, 4));
+        
+        // 선택된 캐릭터 인덱스 설정 변수
+        global.selected_humania_character_index = character_index;
+        
+        // 캐릭터의 인덱스에 맞는 설정 값들을 설정
+        switch(character_index) {
+            case 0:
+            character_obj = obj_humania_character_1;
+            character_cost = 5;
+            break;
+            
+            case 1:
+            character_obj = obj_humania_character_2;
+            character_cost = 9;
+            break;
+            
+            case 2:
+            character_obj = obj_humania_character_3;
+            character_cost = 1;
+            break;
+            
+            case 3:
+            character_obj = obj_humania_character_4;
+            character_cost = 7;
+            break;
+            
+            case 4:
+            character_obj = obj_humania_character_5;
             character_cost = 3;
             break;
         }
@@ -304,6 +310,9 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 2) {
         // 자원을 사용한 코스트 만큼 감소시킴
         global.humania_resource -= global.selected_humania_character_cost;
         
+        // 캐릭터 객체 생성
+        instance_create(320, 184, character_obj);
+        
         // 랜덤 값으로 캐릭터 인덱스 설정
         randomize();
         character_index = round(irandom_range(0, 4));
@@ -314,27 +323,27 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 2) {
         // 캐릭터의 인덱스에 맞는 설정 값들을 설정
         switch(character_index) {
             case 0:
-            character_spr = spr_humania_character_1;
+            character_obj = obj_humania_character_1;
             character_cost = 5;
             break;
             
             case 1:
-            character_spr = spr_humania_character_2;
+            character_obj = obj_humania_character_2;
             character_cost = 9;
             break;
             
             case 2:
-            character_spr = spr_humania_character_3;
+            character_obj = obj_humania_character_3;
             character_cost = 1;
             break;
             
             case 3:
-            character_spr = spr_humania_character_4;
+            character_obj = obj_humania_character_4;
             character_cost = 7;
             break;
             
             case 4:
-            character_spr = spr_humania_character_5;
+            character_obj = obj_humania_character_5;
             character_cost = 3;
             break;
         }

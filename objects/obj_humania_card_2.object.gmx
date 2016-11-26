@@ -35,27 +35,27 @@ is_delayed_now = false;
 // 캐릭터의 인덱스에 맞는 설정 값들을 설정
 switch(character_index) {
     case 0:
-    character_spr = spr_humania_character_1;
+    character_obj = obj_humania_character_1;
     character_cost = 5;
     break;
     
     case 1:
-    character_spr = spr_humania_character_2;
+    character_obj = obj_humania_character_2;
     character_cost = 9;
     break;
     
     case 2:
-    character_spr = spr_humania_character_3;
+    character_obj = obj_humania_character_3;
     character_cost = 1;
     break;
     
     case 3:
-    character_spr = spr_humania_character_4;
+    character_obj = obj_humania_character_4;
     character_cost = 7;
     break;
     
     case 4:
-    character_spr = spr_humania_character_5;
+    character_obj = obj_humania_character_5;
     character_cost = 3;
     break;
 }
@@ -142,6 +142,9 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 1) {
         // 자원을 사용한 코스트 만큼 감소시킴
         global.humania_resource -= global.selected_humania_character_cost;
         
+        // 캐릭터 객체 생성
+        instance_create(448, 184, character_obj);
+        
         // 랜덤 값으로 캐릭터 인덱스 설정
         randomize();
         character_index = round(irandom_range(0, 4));
@@ -152,27 +155,27 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 1) {
         // 캐릭터의 인덱스에 맞는 설정 값들을 설정
         switch(character_index) {
             case 0:
-            character_spr = spr_humania_character_1;
+            character_obj = obj_humania_character_1;
             character_cost = 5;
             break;
             
             case 1:
-            character_spr = spr_humania_character_2;
+            character_obj = obj_humania_character_2;
             character_cost = 9;
             break;
             
             case 2:
-            character_spr = spr_humania_character_3;
+            character_obj = obj_humania_character_3;
             character_cost = 1;
             break;
             
             case 3:
-            character_spr = spr_humania_character_4;
+            character_obj = obj_humania_character_4;
             character_cost = 7;
             break;
             
             case 4:
-            character_spr = spr_humania_character_5;
+            character_obj = obj_humania_character_5;
             character_cost = 3;
             break;
         }
@@ -223,6 +226,9 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 1) {
         // 자원을 사용한 코스트 만큼 감소시킴
         global.humania_resource -= global.selected_humania_character_cost;
         
+        // 캐릭터 객체 생성
+        instance_create(384, 184, character_obj);
+        
         // 랜덤 값으로 캐릭터 인덱스 설정
         randomize();
         character_index = round(irandom_range(0, 4));
@@ -233,27 +239,27 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 1) {
         // 캐릭터의 인덱스에 맞는 설정 값들을 설정
         switch(character_index) {
             case 0:
-            character_spr = spr_humania_character_1;
+            character_obj = obj_humania_character_1;
             character_cost = 5;
             break;
             
             case 1:
-            character_spr = spr_humania_character_2;
+            character_obj = obj_humania_character_2;
             character_cost = 9;
             break;
             
             case 2:
-            character_spr = spr_humania_character_3;
+            character_obj = obj_humania_character_3;
             character_cost = 1;
             break;
             
             case 3:
-            character_spr = spr_humania_character_4;
+            character_obj = obj_humania_character_4;
             character_cost = 7;
             break;
             
             case 4:
-            character_spr = spr_humania_character_5;
+            character_obj = obj_humania_character_5;
             character_cost = 3;
             break;
         }
@@ -304,6 +310,9 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 1) {
         // 자원을 사용한 코스트 만큼 감소시킴
         global.humania_resource -= global.selected_humania_character_cost;
         
+        // 캐릭터 객체 생성
+        instance_create(320, 184, character_obj);
+        
         // 랜덤 값으로 캐릭터 인덱스 설정
         randomize();
         character_index = round(irandom_range(0, 4));
@@ -314,27 +323,27 @@ if(!is_delayed_now &amp;&amp; global.selected_humania_card_index == 1) {
         // 캐릭터의 인덱스에 맞는 설정 값들을 설정
         switch(character_index) {
             case 0:
-            character_spr = spr_humania_character_1;
+            character_obj = obj_humania_character_1;
             character_cost = 5;
             break;
             
             case 1:
-            character_spr = spr_humania_character_2;
+            character_obj = obj_humania_character_2;
             character_cost = 9;
             break;
             
             case 2:
-            character_spr = spr_humania_character_3;
+            character_obj = obj_humania_character_3;
             character_cost = 1;
             break;
             
             case 3:
-            character_spr = spr_humania_character_4;
+            character_obj = obj_humania_character_4;
             character_cost = 7;
             break;
             
             case 4:
-            character_spr = spr_humania_character_5;
+            character_obj = obj_humania_character_5;
             character_cost = 3;
             break;
         }

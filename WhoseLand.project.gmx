@@ -14,6 +14,11 @@
           <sprite>sprites\spr_robopia_character_3</sprite>
           <sprite>sprites\spr_robopia_character_4</sprite>
           <sprite>sprites\spr_robopia_character_5</sprite>
+          <sprite>sprites\spr_robopia_character_1_attack</sprite>
+          <sprite>sprites\spr_robopia_character_2_attack</sprite>
+          <sprite>sprites\spr_robopia_character_3_attack</sprite>
+          <sprite>sprites\spr_robopia_character_4_attack</sprite>
+          <sprite>sprites\spr_robopia_character_5_attack</sprite>
         </sprites>
         <sprites name="tower">
           <sprite>sprites\spr_robopia_main_tower</sprite>
@@ -29,6 +34,15 @@
         <sprites name="cost">
           <sprite>sprites\spr_robopia_cost</sprite>
         </sprites>
+        <sprites name="bullet">
+          <sprite>sprites\spr_robopia_bullet_1</sprite>
+          <sprite>sprites\spr_robopia_bullet_2</sprite>
+          <sprite>sprites\spr_robopia_bullet_3</sprite>
+          <sprite>sprites\spr_robopia_bullet_4</sprite>
+          <sprite>sprites\spr_robopia_bullet_5</sprite>
+          <sprite>sprites\spr_robopia_bullet_6</sprite>
+          <sprite>sprites\spr_robopia_bullet_8</sprite>
+        </sprites>
       </sprites>
       <sprites name="humania">
         <sprites name="chracter">
@@ -37,6 +51,11 @@
           <sprite>sprites\spr_humania_character_3</sprite>
           <sprite>sprites\spr_humania_character_4</sprite>
           <sprite>sprites\spr_humania_character_5</sprite>
+          <sprite>sprites\spr_humania_character_1_attack</sprite>
+          <sprite>sprites\spr_humania_character_2_attack</sprite>
+          <sprite>sprites\spr_humania_character_3_attack</sprite>
+          <sprite>sprites\spr_humania_character_4_attack</sprite>
+          <sprite>sprites\spr_humania_character_5_attack</sprite>
         </sprites>
         <sprites name="tower">
           <sprite>sprites\spr_humania_main_tower</sprite>
@@ -51,6 +70,15 @@
         </sprites>
         <sprites name="cost">
           <sprite>sprites\spr_humania_cost</sprite>
+        </sprites>
+        <sprites name="bullet">
+          <sprite>sprites\spr_humania_bullet_1</sprite>
+          <sprite>sprites\spr_humania_bullet_2</sprite>
+          <sprite>sprites\spr_humania_bullet_3</sprite>
+          <sprite>sprites\spr_humania_bullet_4</sprite>
+          <sprite>sprites\spr_humania_bullet_5</sprite>
+          <sprite>sprites\spr_humania_bullet_6</sprite>
+          <sprite>sprites\spr_humania_bullet_7</sprite>
         </sprites>
       </sprites>
       <sprites name="bg">
@@ -74,6 +102,10 @@
         <sprite>sprites\spr_text_8</sprite>
         <sprite>sprites\spr_text_9</sprite>
         <sprite>sprites\spr_timer</sprite>
+      </sprites>
+      <sprites name="effect">
+        <sprite>sprites\spr_explosion_effect_1</sprite>
+        <sprite>sprites\spr_explosion_effect_2</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -116,12 +148,26 @@
         <objects name="bar">
           <object>objects\obj_robopia_resource_bar</object>
         </objects>
+        <objects name="bullet">
+          <object>objects\obj_robopia_bullet_1</object>
+          <object>objects\obj_robopia_bullet_2</object>
+          <object>objects\obj_robopia_bullet_3</object>
+          <object>objects\obj_robopia_bullet_4</object>
+          <object>objects\obj_robopia_bullet_5</object>
+          <object>objects\obj_robopia_bullet_6</object>
+          <object>objects\obj_robopia_bullet_7</object>
+        </objects>
         <objects name="character">
+          <object>objects\obj_robopia_character</object>
           <object>objects\obj_robopia_character_1</object>
+          <object>objects\obj_robopia_character_2</object>
+          <object>objects\obj_robopia_character_3</object>
+          <object>objects\obj_robopia_character_4</object>
+          <object>objects\obj_robopia_character_5</object>
         </objects>
         <objects name="tower">
-          <object>objects\obj_robopia_main_tower</object>
           <object>objects\obj_robopia_sub_tower</object>
+          <object>objects\obj_robopia_main_tower</object>
         </objects>
       </objects>
       <objects name="bg">
@@ -130,12 +176,29 @@
         <object>objects\obj_sun</object>
       </objects>
       <objects name="humania">
+        <objects name="bar">
+          <object>objects\obj_humania_resource_bar</object>
+        </objects>
+        <objects name="bullet">
+          <object>objects\obj_humania_bullet_1</object>
+          <object>objects\obj_humania_bullet_2</object>
+          <object>objects\obj_humania_bullet_3</object>
+          <object>objects\obj_humania_bullet_4</object>
+          <object>objects\obj_humania_bullet_5</object>
+          <object>objects\obj_humania_bullet_6</object>
+          <object>objects\obj_humania_bullet_7</object>
+        </objects>
+        <objects name="character">
+          <object>objects\obj_humania_character</object>
+          <object>objects\obj_humania_character_1</object>
+          <object>objects\obj_humania_character_2</object>
+          <object>objects\obj_humania_character_3</object>
+          <object>objects\obj_humania_character_4</object>
+          <object>objects\obj_humania_character_5</object>
+        </objects>
         <objects name="tower">
           <object>objects\obj_humania_sub_tower</object>
           <object>objects\obj_humania_main_tower</object>
-        </objects>
-        <objects name="bar">
-          <object>objects\obj_humania_resource_bar</object>
         </objects>
       </objects>
       <objects name="btn">
@@ -158,6 +221,10 @@
         <object>objects\obj_text_8</object>
         <object>objects\obj_text_9</object>
         <object>objects\obj_timer</object>
+      </objects>
+      <objects name="effect">
+        <object>objects\obj_explosion_effect_1</object>
+        <object>objects\obj_explosion_effect_2</object>
       </objects>
     </objects>
   </objects>
