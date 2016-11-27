@@ -4,7 +4,35 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="battle_field">
+      <sounds name="bgm">
+        <sound>sound\sd_battle_field_morning</sound>
+        <sound>sound\sd_battle_field_afternoon</sound>
+        <sound>sound\sd_battle_field_night</sound>
+      </sounds>
+      <sounds name="effect">
+        <sounds name="tower">
+          <sound>sound\sd_sub_tower_destroy</sound>
+          <sound>sound\sd_main_tower_destroy</sound>
+        </sounds>
+        <sounds name="robot">
+          <sound>sound\sd_robot_1</sound>
+          <sound>sound\sd_robot_2</sound>
+          <sound>sound\sd_robot_3</sound>
+          <sound>sound\sd_robot_4</sound>
+          <sound>sound\sd_robot_5</sound>
+        </sounds>
+        <sounds name="human">
+          <sound>sound\sd_human_1</sound>
+          <sound>sound\sd_human_2</sound>
+          <sound>sound\sd_human_3</sound>
+          <sound>sound\sd_human_4</sound>
+          <sound>sound\sd_human_5</sound>
+        </sounds>
+      </sounds>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="battle_field">
       <sprites name="robopia">

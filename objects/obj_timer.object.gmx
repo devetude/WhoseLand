@@ -30,6 +30,9 @@ global.remain_time = 300;
 
 // 1초 마다 1번씩 타이머가 작동하도록 알람 등록
 alarm[0] = 30;
+
+// 배경음악 실행
+audio_play_sound(sd_battle_field_morning, 0, 0);
 </string>
           </argument>
         </arguments>
@@ -142,6 +145,10 @@ if(global.remain_time == 200) {
     
     // 알람 1번에 등록 (1/30초 마다 호출)
     alarm[1] = 1;
+    
+    // 배경음악 변경
+    audio_stop_sound(sd_battle_field_morning);
+    audio_play_sound(sd_battle_field_afternoon, 0, 0);
 }
 
 // 남은 시간이 100초가 되면 배경을 저녁으로 변경
@@ -158,6 +165,10 @@ else if(global.remain_time == 100) {
     
     // 알람 2번에 등록 (1/30초 마다 호출)
     alarm[2] = 1;
+    
+    // 배경음악 변경
+    audio_stop_sound(sd_battle_field_afternoon);
+    audio_play_sound(sd_battle_field_night, 0, 0);
 }
 
 // 알람 이벤트가 발생했을 경우 다시 1초 후에 발생하도록 알람 설정

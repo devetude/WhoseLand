@@ -36,6 +36,9 @@ target = noone;
 attack_range = 4;
 attack_damage = 30;
 attack_delay = 25;
+
+// 효과음악 재생
+audio_play_sound(sd_human_1, 1, 0);
 </string>
           </argument>
         </arguments>

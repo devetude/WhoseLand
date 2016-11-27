@@ -57,6 +57,9 @@ attack_delay = 100;
           <argument>
             <kind>1</kind>
             <string>instance_create(x, y, obj_explosion_effect_2);
+
+// 효과음악 재생
+audio_play_sound(sd_sub_tower_destroy, 1, 0);
 </string>
           </argument>
         </arguments>

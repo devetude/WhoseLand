@@ -36,6 +36,9 @@ target = noone;
 attack_range = 80;
 attack_damage = 25;
 attack_delay = 90;
+
+// 효과음악 재생
+audio_play_sound(sd_robot_3, 1, 0);
 </string>
           </argument>
         </arguments>
