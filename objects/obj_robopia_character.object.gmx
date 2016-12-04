@@ -56,6 +56,9 @@ is_attack_now = false;
           <argument>
             <kind>1</kind>
             <string>instance_create(x, y, obj_explosion_effect_2);
+
+// 휴머니아 점수 추가
+global.humania_score += 1;
 </string>
           </argument>
         </arguments>

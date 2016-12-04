@@ -60,6 +60,9 @@ attack_delay = 100;
 
 // 효과음악 재생
 audio_play_sound(sd_sub_tower_destroy, 1, 0);
+
+// 휴머니아 점수 추가
+global.humania_score += 500;
 </string>
           </argument>
         </arguments>

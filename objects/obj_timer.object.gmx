@@ -28,6 +28,10 @@
             <string>// 전역 변수로 남은 시간을 300초로 설정
 global.remain_time = 300;
 
+// 전역 변수로 로보피아와 휴머니아 점수를 각각 0점으로 설정
+global.robopia_score = 0;
+global.humania_score = 0;
+
 // 1초 마다 1번씩 타이머가 작동하도록 알람 등록
 alarm[0] = 30;
 
@@ -196,14 +200,25 @@ alarm[0] = 30;
           <argument>
             <kind>1</kind>
             <string>// 남은 시간이 0이 아닐 경우
-if(global.remain_time != -1) {
+if(global.remain_time != -1 &amp;&amp; global.robopia_score &lt; 1500 &amp;&amp; global.humania_score &lt; 1500) {
     exit;
 }
 
 // 남은 시간이 0일 경우
 else {
     // 게임 종료를 알리고 게임 종료
-    show_message("게임 종료!");
+    if(global.robopia_score &gt; global.humania_score) {
+        show_message("로보피아 " + string(global.robopia_score - global.humania_score) + "점차로 승리!");
+    }
+    
+    else if(global.robopia_score &lt; global.humania_score) {
+        show_message("휴머니아 " + string(global.humania_score - global.robopia_score) + "점차로 승리!");
+    }
+    
+    else {
+        show_message(string(global.humania_score) + "점으로 무승부!");
+    }
+    
     game_end();
 }
 </string>
