@@ -2,28 +2,29 @@
 3학년 2학기 컴퓨터 게임 (고찬 교수) 프로젝트
 
 #* 시놉시스
-<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/1.JPG?raw=true" width="600px">
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/1.JPG?raw=true" width="800px">
 
 #* 배경
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/2.JPG?raw=true" width="800px">
 
 #* 주요 주인공
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/3.JPG?raw=true" width="800px">
 
 #* 게임요소
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/4.JPG?raw=true" width="800px">
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/5.JPG?raw=true" width="800px">
 
 #* 점수요소
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/6.JPG?raw=true" width="800px">
 
 #* 게임 인터페이스
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/7.JPG?raw=true" width="800px">
 
 #* 타워
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/8.JPG?raw=true" width="800px">
 
 #* 유닛
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/9.JPG?raw=true" width="800px">
 
 #* 홍보영상
 [![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
