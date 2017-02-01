@@ -2,7 +2,7 @@
 3학년 2학기 컴퓨터 게임 (고찬 교수) 프로젝트
 
 #* 시놉시스
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+<img src="https://github.com/devetude/WhoseLand/blob/master/ppt/1.JPG?raw=true" width="600px">
 
 #* 배경
 [![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
