@@ -27,7 +27,7 @@
 <img src="https://github.com/devetude/WhoseLand/blob/master/ppt/9.JPG?raw=true" width="800px">
 
 #* 홍보영상
-[![](https://d2gd6pc034wcta.cloudfront.net/images/logo.png)](https://www.acmicpc.net)
+https://www.shakr.com/review/9EwjJhb
 
 #* 라이센스
 본 프로젝트는 Apache 2.0 License를 따릅니다. http://www.apache.org/licenses/LICENSE-2.0
